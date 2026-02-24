@@ -1,0 +1,11 @@
+import cmath
+
+# Read the complex number from input
+z = complex(input().strip())
+
+# Convert to polar coordinates
+r, phi = cmath.polar(z)
+
+# Print the results
+print(r)
+print(phi)
