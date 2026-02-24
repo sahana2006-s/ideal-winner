@@ -1,0 +1,21 @@
+mport itertools
+
+# Read K and M
+K, M = map(int, input().split())
+
+# Read K lists
+lists = []
+for _ in range(K):
+    # The first number is the number of elements, we ignore it using [1:]
+    l = list(map(int, input().split()))[1:]
+    lists.append(l)
+
+# Cartesian product to get all combinations
+max_value = 0
+for combination in itertools.product(*lists):
+    # Calculate sum of squares modulo M
+    result = sum(x**2 for x in combination) % M
+    if result > max_value:
+        max_value = result
+
+print(max_value)
