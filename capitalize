@@ -1,0 +1,6 @@
+def solve(s):
+    # Split the string by spaces to keep original formatting
+    for x in s.split(' '):
+        # Capitalize only the first character of each word
+        s = s.replace(x, x.capitalize())
+    return s
