@@ -1,0 +1,13 @@
+# Read Input
+m = int(input())
+set_a = set(map(int, input().split()))
+n = int(input())
+set_b = set(map(int, input().split()))
+
+# Calculate Symmetric Difference
+# The ^ operator or a.symmetric_difference(b) finds elements in either, but not both
+sym_diff = set_a ^ set_b
+
+# Sort and Print
+for i in sorted(list(sym_diff)):
+    print(i)
