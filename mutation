@@ -1,0 +1,21 @@
+def mutate_string(string, position, character):
+    # 1. Convert the string to a list of characters
+    char_list = list(string)
+
+    # 2. Change the character at the specified position
+    char_list[position] = character
+
+    # 3. Join the list back into a string
+    modified_string = "".join(char_list)
+
+    # 4. Return the new string
+    return modified_string
+
+# Example Usage (from your problem description):
+# s = 'abracadabra'
+# position = 5
+# character = 'k'
+# print(mutate_string(s, position, character)) # Output: abrackdabra
+
+
+
