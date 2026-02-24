@@ -1,0 +1,38 @@
+if __name__ == '__main__':
+    # Initialize an empty list
+    my_list = []
+    
+    # Read the number of commands from standard input
+    N = int(input())
+    
+    # Iterate N times to read and execute each command
+    for _ in range(N):
+        # Read the command line and split it into a list of strings
+        command_parts = input().split()
+        
+        # The first part is always the command name
+        command_name = command_parts[0]
+        
+        # Check the command name and perform the corresponding operation
+        if command_name == "insert":
+            # Extract arguments as integers: index and element
+            i = int(command_parts[1])
+            e = int(command_parts[2])
+            my_list.insert(i, e)
+        elif command_name == "print":
+            print(my_list)
+        elif command_name == "remove":
+            # Extract argument as integer: element
+            e = int(command_parts[1])
+            my_list.remove(e)
+        elif command_name == "append":
+            # Extract argument as integer: element
+            e = int(command_parts[1])
+            my_list.append(e)
+        elif command_name == "sort":
+            my_list.sort()
+        elif command_name == "pop":
+            my_list.pop()
+        elif command_name == "reverse":
+            my_list.reverse()
+
