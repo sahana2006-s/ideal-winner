@@ -1,0 +1,21 @@
+from itertools import product
+
+# Read input lines
+line1 = input().strip().split()
+line2 = input().strip().split()
+
+# Convert elements to integers
+A = [int(x) for x in line1]
+B = [int(x) for x in line2]
+
+# Compute the cartesian product
+# The result is already sorted due to input constraints and the implementation of product
+cartesian_product = list(product(A, B))
+
+# Format the output as space-separated tuples
+# The map function converts each tuple to a string representation, 
+# and join puts a space between them.
+output = ' '.join(map(str, cartesian_product))
+
+# Print the final result
+print(output)
