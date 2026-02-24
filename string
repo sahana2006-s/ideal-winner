@@ -1,0 +1,8 @@
+def count_substring(string, sub_string):
+    count = 0
+    # Loop through each index of the string
+    for i in range(len(string)):
+        # Check if the substring starts at the current index
+        if string[i:].startswith(sub_string):
+            count += 1
+    return count
