@@ -1,0 +1,15 @@
+# Read input
+n_elements = int(input())
+a = set(map(int, input().split()))
+n_ops = int(input())
+
+# Perform operations
+for _ in range(n_ops):
+    operation, length = input().split()
+    other_set = set(map(int, input().split()))
+    
+    # Use getattr to call the method dynamically
+    getattr(a, operation)(other_set)
+
+# Print the sum
+print(sum(a))
