@@ -1,0 +1,14 @@
+# Read n (English students)
+n = int(input())
+# Read English student set
+english_subs = set(input().split())
+
+# Read b (French students)
+b = int(input())
+# Read French student set
+french_subs = set(input().split())
+
+# Union of both sets and count total unique students
+total_students = len(english_subs.union(french_subs))
+
+print(total_students)
