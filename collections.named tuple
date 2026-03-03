@@ -1,0 +1,6 @@
+from collections import namedtuple
+N = int(input())
+columns = input().split()
+Student = namedtuple('Student', columns)
+marks = [int(Student(*input().split()).MARKS) for _ in range(N)]
+print(f"{sum(marks)/N:.2f}")
