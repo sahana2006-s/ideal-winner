@@ -1,0 +1,18 @@
+import sys
+try:
+    line = sys.stdin.readline()
+    if not line:
+        exit()
+    t = int(line)
+except ValueError:
+    exit()
+
+for _ in range(t):
+    try:
+       
+        a, b = sys.stdin.readline().split()
+        
+        print(int(a) // int(b))
+    except (ZeroDivisionError, ValueError) as e:
+
+        print("Error Code:", e)
