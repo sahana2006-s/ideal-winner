@@ -1,0 +1,16 @@
+n = int(input())
+
+s = set(map(int, input().split()))
+
+N = int(input())
+
+
+for _ in range(N):
+    command, length = input().split()
+    new_set = set(map(int, input().split()))
+    
+   
+    getattr(s, command)(new_set)
+
+
+print(sum(s))
