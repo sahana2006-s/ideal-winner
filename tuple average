@@ -1,0 +1,12 @@
+n_x = list(map(int, input().split()))
+n = n_x[0]
+x = n_x[1]
+subject_marks = []
+for _ in range(x):
+    marks = list(map(float, input().split()))
+    subject_marks.append(marks)
+student_marks = zip(*subject_marks)
+for marks_tuple in student_marks:
+    average = sum(marks_tuple) / x
+    print(f"{average:.1f}")
+
