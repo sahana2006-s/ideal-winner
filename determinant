@@ -1,0 +1,7 @@
+import numpy
+import numpy as np
+n = int(input())
+a = np.array([input().split() for _ in range(n)], float)
+determinant = np.linalg.det(a)
+rounded_determinant = round(determinant, 2)
+print(rounded_determinant)
