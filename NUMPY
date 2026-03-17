@@ -1,0 +1,9 @@
+import numpy
+a_input = list(map(int, input().split()))
+b_input = list(map(int, input().split()))
+A = numpy.array(a_input)
+B = numpy.array(b_input)
+inner_product = numpy.inner(A, B)
+print(inner_product)
+outer_product = numpy.outer(A, B)
+print(outer_product)
