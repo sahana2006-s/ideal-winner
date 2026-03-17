@@ -1,0 +1,6 @@
+x_str, k_str = input().split()
+x = int(x_str)
+k = int(k_str)
+polynomial_str = input()
+result = eval(polynomial_str, {"x": x, "__builtins__": None})
+print(result == k)
