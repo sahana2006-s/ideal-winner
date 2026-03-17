@@ -1,0 +1,10 @@
+import numpy
+n, m = map(int, input().split())
+my_array = []
+for _ in range(n):
+    row = list(map(int, input().split()))
+    my_array.append(row)
+my_array = numpy.array(my_array)
+sum_along_axis_0 = numpy.sum(my_array, axis=0)
+result_product = numpy.prod(sum_along_axis_0)
+print(result_product)
