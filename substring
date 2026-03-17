@@ -1,0 +1,5 @@
+import re
+s = "rabcdeefgyYhFjkIoomnpOeorteeeeet"
+result = re.findall(r'(?<=[qwrtypsdfghjklzxcvbnmQWRTYPSDFGHJKLZXCVBNM])[aeiouAEIOU]{2,}(?=[qwrtypsdfghjklzxcvbnmQWRTYPSDFGHJKLZXCVBNM])', s)
+for match in result:
+    print(match)
