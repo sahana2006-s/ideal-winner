@@ -1,0 +1,7 @@
+import collections
+s = input().strip()
+counts = collections.Counter(s)
+sorted_counts = sorted(counts.items(), key=lambda x: (-x[1], x[0]))
+for i in range(3):
+    print(f"{sorted_counts[i][0]} {sorted_counts[i][1]}")
+
