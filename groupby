@@ -1,0 +1,8 @@
+from itertools import groupby
+S = input().strip()
+result = []
+for k, g in groupby(S):
+    count = len(list(g))
+    result.append(f"({count}, {k})")
+print(" ".join(result))
+
