@@ -1,0 +1,25 @@
+import sys
+from datetime import datetime
+def get_utc_time(time_str):
+    fmt = "%a %d %b %Y %H:%M:%S %z"
+    dt = datetime.strptime(time_str, fmt)
+    return dt
+def solve():
+    try:
+        line = sys.stdin.readline()
+        if not line:
+            return
+        t = int(line.strip())
+    except EOFError:
+        return
+
+    for _ in range(t):
+        time1 = sys.stdin.readline().strip()
+        time2 = sys.stdin.readline().strip()
+        dt1 = get_utc_time(time1)
+        dt2 = get_utc_time(time2)
+        diff = abs(int((dt1 - dt2).total_seconds()))
+        print(diff)
+
+if __name__ == '__main__':
+    solve()
