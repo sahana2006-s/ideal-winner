@@ -1,0 +1,18 @@
+def to_utc(time_str):
+    fmt = "%a %d %b %Y %H:%M:%S %z"
+    return datetime.strptime(time_str, fmt)
+try:
+    line = sys.stdin.readline()
+    if not line:
+        exit()
+    t = int(line.strip())
+except EOFError:
+    exit()
+
+for _ in range(t):
+    time1_str = sys.stdin.readline().strip()
+    time2_str = sys.stdin.readline().strip()
+    dt1 = to_utc(time1_str)
+    dt2 = to_utc(time2_str)
+    diff = abs(int((dt1 - dt2).total_seconds()))
+    print(diff)
