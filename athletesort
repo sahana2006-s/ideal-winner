@@ -1,0 +1,29 @@
+import sys
+
+def solve():
+    # Read n and m
+    try:
+        line1 = sys.stdin.readline().split()
+        if not line1: return
+        n, m = map(int, line1)
+        
+        # Read the table data
+        arr = []
+        for _ in range(n):
+            arr.append(list(map(int, sys.stdin.readline().split())))
+            
+       
+        k = int(sys.stdin.readline())
+        
+        
+        arr.sort(key=lambda x: x[k])
+        
+      
+        for row in arr:
+            print(*(row))
+            
+    except ValueError:
+        return
+
+if __name__ == '__main__':
+    solve()
