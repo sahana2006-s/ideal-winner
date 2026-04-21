@@ -1,0 +1,19 @@
+import re
+import sys
+
+def replace_logic(match):
+    if match.group(0) == "&&":
+        return "and"
+    return "or"
+
+
+n = int(input())
+
+
+for _ in range(n):
+    line = sys.stdin.readline().rstrip('\n')
+    
+    
+    pattern = r"(?<= )(&&|\|\|)(?= )"
+    
+    print(re.sub(pattern, replace_logic, line))
