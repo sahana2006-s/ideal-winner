@@ -1,0 +1,43 @@
+import sys
+def solve():
+   
+    try:
+        line1 = sys.stdin.readline()
+        if not line1:
+            return
+        t = int(line1.strip())
+    except ValueError:
+        return
+
+    for _ in range(t):
+        n = int(sys.stdin.readline().strip())
+        blocks = list(map(int, sys.stdin.readline().split()))
+        
+        left = 0
+        right = n - 1
+        last_picked = float('inf')
+        possible = True
+        
+        while left <= right:
+            
+            if blocks[left] >= blocks[right]:
+                current = blocks[left]
+                left += 1
+            else:
+                current = blocks[right]
+                right -= 1
+            
+            
+            if current > last_picked:
+                possible = False
+                break
+            
+            last_picked = current
+            
+        if possible:
+            print("Yes")
+        else:
+            print("No")
+
+if __name__ == "__main__":
+    solve()
