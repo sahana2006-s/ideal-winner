@@ -1,0 +1,17 @@
+import numpy as np
+
+# Read the dimensions N and M
+n, m = map(int, input().split())
+
+# Read array A and B using list comprehension and convert to NumPy arrays
+# Specifying dtype=int is necessary as per the task requirements
+a = np.array([list(map(int, input().split())) for _ in range(n)], dtype=int)
+b = np.array([list(map(int, input().split())) for _ in range(n)], dtype=int)
+
+# Perform and print operations in order: +, -, *, //, %, **
+print(np.add(a, b))
+print(np.subtract(a, b))
+print(np.multiply(a, b))
+print(np.floor_divide(a, b)) # Use floor_divide for integer division
+print(np.mod(a, b))
+print(np.power(a, b))
