@@ -1,0 +1,15 @@
+import re
+try:
+    n = int(input())
+except EOFError:
+    n = 0
+
+
+pattern = r'(?<=.)#(?:[0-9a-fA-F]{3}){1,2}\b'
+
+for _ in range(n):
+    line = input()
+    
+    matches = re.findall(pattern, line)
+    for match in matches:
+        print(match)
