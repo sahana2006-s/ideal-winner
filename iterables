@@ -1,0 +1,11 @@
+from itertools import combinations
+n = int(input())
+letters = input().split()
+k = int(input())
+all_combinations = list(combinations(range(n), k))
+a_indices = [i for i, char in enumerate(letters) if char == 'a']
+favorable_outcomes = 0
+for combo in all_combinations:
+    if any(idx in a_indices for idx in combo):
+        favorable_outcomes += 1
+print(f"{favorable_outcomes / len(all_combinations):.12f}")
